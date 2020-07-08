@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEKA - Conceitos Básicos</title>
+    <script languague="javascript" type="text/javascript">
+        function verExemplo()
+        {
+            open("acampamento.png");
+        }
+    </script>
+    
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+        h1{
+            padding: 0;
+            font-family: 'Linux Libertine','Georgia','Times',serif;
+            line-height: 1.3;
+        }       
+        hr{
+            border-color: black;
+            
+        }
+        i{
+            font-family: 'Linux Libertine','Georgia','Times',serif;
+        }   
+        p{
+            font-family: 'Linux Libertine','Georgia','Times',serif;
+            font-size: medium;
+            max-width: 100ch;
+        }
+        #content{
+            position: relative;
+        }
+        #content img{
+            position: absolute;
+        }
+        
+        h2{
+            font-family: 'Linux Libertine','Georgia','Times',serif;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div id = "content">
+        <h1>O Weka</h1>
+        <hr>
+        <br><i>Made by - Lucas F.</i>
+        <br>
+        <img src="weka.png" style="top: 90px; right: 150px;"/>
+        <br><p>O <b>Weka</b> tem como objectivo agregar algoritmos provenientes de diferentes abordagens/paradigmas na sub-área da inteligência artificial dedicada ao estudo de aprendizagem de máquina</p>
+        <p>Essa sub-área pretende desenvolver algoritmos e técnicas que permitam a um computador "aprender" (no sentido de obter novo conhecimento) quer indutiva quer dedutivamente.</p>
+        <p>O Weka procede à análise computacional e estatística dos dados fornecidos recorrendo a técnicas de mineração de dados tentando, indutivamente, a partir dos padrões encontrados gerar hipóteses para soluções e no extremos inclusive teorias sobre os dados em questão.</p>
+        <p>Ele pode ser facilmente instalado clicando <a href="https://sourceforge.net/projects/weka/files/latest/download">aqui</a></p>
+        <br>
+        <br><h2>Como criar um arquivo ARFF</h2>
+        <img src="arff.png" style="top: 600px; right: 170px; width: 230px; height: 230px;"/>
+        <br>
+        <p>Primeiramente, para criar um arquivo <b>ARFF</b>, abra um editor de texto limpo, geralmente já vem instalado no seu sistema operacional, como o bloco de notas do Windows</p>
+        <img src="bloco_de_notas.png" style="top: 505px; right: 955px;" width="150" height="150"/>
+        <br><br><br><br><br><br><br>
+        <br><p style="text-align: center;">Use a tag <b>@Relation</b> para definir o nome do arquivo</p>
+        <img src="relation.png" style="top: 735px; right: 845px;" />
+        <br><br><br>
+        <br><p style="text-align: center;">Para definir o nome do atributo use a tag <b>@Attribute</b></p>
+        <img src="atributo.png" style="top: 860px; right: 745px; width: 520px; height: 250px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><p style="text-align: center;">Para criar elementos com valores dos atributos pré definidos utilize a tag <b>@Data</b> na ordem de criação dos atributos</p>
+        <img src="valores.png" style="top: 1200px; right: 800px; width: 400px; height: 300px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <label style="margin-left: 350px;">Clique aqui para ver o exemplo: </label>
+        <input type="submit" value="Ver" onclick="verExemplo()"/> 
+        <br><br>
+        <br><p style="text-align: center;">Clique em <b>salvar como</b> e salve o arquivo como <b>.ARFF</b>, sendo assim, o Weka poderá interpretar seu arquivo</p>
+        <br><br>
+        <h2>Como utilizar o WEKA para abrir um dado ARFF</h2>
+        <br><p style="text-align: center;">Ao abrir o programa, essa será a <b>interface</b></p>
+        <img src="weka_interface.png" style="top: 1810px; right: 740px; width: 500px; height: 350px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p style="text-align: center;">Clique em <b>Explorer</b> para abrir essa interface</p>
+        <img src="weka_explorer.png" style="top: 2250px; right: 740px; width: 510px; height: 350px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p style="text-align: center;">Clique em <b>Open file...</b>  e abra seu arquivo <b>.ARFF</b></p>
+        <img src="weka_explorer.png" style="top: 2690px; right: 740px; width: 510px; height: 350px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p style="text-align: center;">Aqui é os dados do arquivo <b>.ARFF</b></b></p>
+        <img src="weka_open_file.png" style="top: 3120px; right: 720px; width: 550px; height: 390px;"/>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+        <h1>Análise KNN</h1>
+        <img src="knn.jpeg" style="top: 3710px; right: 50px;"/>
+        <hr>
+        <br>
+        <h2>Análise de dados</h2>
+        <p>Cada vez mais a quantidade de dados com padrões vem crescendo no mundo, com isso vem a necessidade de sistemas e ferrametas que consigam interpretar, separar e utilizar esses dados, por isso universidades e programadores trabalham dia e noite para criarem essas ferramentas. O Knn é um algoritimo que surgiu com esse objetivo de análisar os dados e fazer previsões com eles, mas o ponto que mais chama a atenção dele é sua simplicidade na hora de utilizar.
+        </p>
+        <br><h1>Casos para utilizar o KNN</h1>
+        <br>
+        <h2>KNN para regressão</h2>
+        <p>Quando o KNN é usado para problemas de regressão, a previsão é baseada na média ou na mediana das instâncias mais semelhantes.</p>
+        <br>
+        <h2>KNN para classificação</h2>
+        <p>Ele pode também ser utilizado para classificar algo, como uma operadora classifica seus clientes, os que não usam seus serviços, os que usam de vez em quando e os que utilizam frequentemente, para separar as ofertas e promoções.</p>
+        <br>
+        <h1>Como utilizar o KNN</h1>
+        <br>
+        <h2>Para classificação</h2>
+        <img src="distancia_knn.ong.png" style="top: 4280px; right: 50px; width: 405px; height: 430x;"/>
+        <p>O caso mais comum para utilização do KNN, é para classificações, o método mais comum para medir a distância entre dois pontos é a distância Euclidiana</p>
+        <img src="distancia_euclidiana.png" style="top: 4435px; right: 840px;"/>
+        <br><br><br><br><br><br>
+        <p>Ele calcula a distâncias entre dois vetores que no caso acima foram representados como sendo linhas de uma matriz que é sua representação mais comum em aplicações reais.</p>
+        <br>
+        <h2>Para regressão</h2>
+        <p>Com algumas pequenas modificações é possível aplicar o KNN para problemas de regressões. Assim como antes podemos utilizar a distância euclidiana para calcular a distância entre as instâncias porem a diferença reside na forma em que será calculado o valor para ser associar a instância que está sendo testada.
+            Ao invés de usarmos aquela classe que aparece com mais frequência nos K  vizinhos mais próximos, pegaremos uma média dos valores dessas instâncias.
+            <br>
+            <br>
+            Agora suponha o conjunto de vetores pertecendo ao conjunto dos K vizinhos mais próximos:
+        </p>
+        <img src="regressão1.png" style="top: 4829px; right: 1055px;"/>
+        <br><br><br>
+        <p>Como sabemos, cada vetor desse conjuntos esta associado a um número real, pois o KNN usa o próprio conjunto de treino como parte do algoritmo, logo usaremos o vetor esses valores, então podemos a cada vetor do conjunto K a uma valor real que representa seu valor.
+
+            Logo teremos o seguinte vetor denominado V.</p>
+        <img src="regressão2.png" style="top: 4965px; right: 1063px;"/>
+        <br><br><br><br>
+        <h1>Como avaliar os resultados</h1>
+        <p>Com os dados e as previsões que o KNN te forneceu, você pode utilizar de diversas formas para seu negócio ou seu projeto, mas com tudo, todos os dados devem ser analisados e bem planejados para que nenhum erro futuro ocorra.</p>
+    </div>
+</body>
+</html>
